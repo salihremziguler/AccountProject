@@ -24,6 +24,18 @@ data class Transaction(
 
 
 ){
+
+        constructor(amount: BigDecimal,account: Account):this(
+                id="",
+                amount=amount,
+                transactionDate=LocalDateTime.now(),
+                transactionType=TransactionType.INITIAL,
+                account=account
+
+
+        )
+
+
         enum class TransactionType{
               INITIAL,TRANSFER
         }
